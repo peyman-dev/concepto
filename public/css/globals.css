@@ -34,3 +34,9 @@ body {
 @utility flex-end {
   @apply flex items-center justify-end;
 }
+
+@utility flex-between {
+  @apply flex items-center justify-between
+}
+
+
