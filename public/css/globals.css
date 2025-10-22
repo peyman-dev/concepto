@@ -4,6 +4,15 @@
 @theme {
   --font-IRANSansX: "IRANSansX";
 
+  --color-primary-tint-100: #e4efff;
+  --color-primary-tint-300: #AECFFE;
+  --color-primary-tint-500: #79AEFE;
+  --color-primary-tint-700: #438EFD;
+
+  --color-primary-shade-100: #0260EB;
+  --color-primary-shade-300: #0148B0;
+  --color-primary-shade-500: #013075;
+  --color-primary-shade-700: #00183B;
   --breakpoint-*: initial;
   --breakpoint-xs: 376px;
   --breakpoint-sm: 576px;
@@ -13,7 +22,7 @@
 }
 
 body {
-  @apply font-IRANSansX max-w-[1920px] mx-auto;
+  @apply font-IRANSansX max-w-[1920px] mx-auto overflow-x-hidden;
 }
 
 @utility container {
