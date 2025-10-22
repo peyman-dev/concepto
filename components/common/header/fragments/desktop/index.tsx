@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "./elements/logo";
 import Input from "@/components/ui/input";
 import { LogIn, MoveUpLeft, Search } from "lucide-react";
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/button/";
 import Navigation from "./elements/navigation";
 
 const Desktop = () => {
