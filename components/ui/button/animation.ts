@@ -1,22 +1,24 @@
+import {
+  RIPPLE_FADE_DURATION,
+  RIPPLE_SCALE,
+  RIPPLE_SIZE,
+} from "@/core/ui/button";
+
 interface IRippleProps {
-    ripple: HTMLElement;
-    x: number;
-    y: number;
-  }
-export default function startRippleAnimation({
-  ripple,
-  x,
-  y,
-}: IRippleProps) {
-  const size = 32;
+  ripple: HTMLElement;
+  x: number;
+  y: number;
+}
+export default function startRippleAnimation({ ripple, x, y }: IRippleProps) {
+  const size = RIPPLE_SIZE;
   const halfSize = size / 2;
 
   ripple.style.left = `${x - halfSize}px`;
   ripple.style.top = `${y - halfSize}px`;
-  ripple.style.scale = "5";
+  ripple.style.scale = RIPPLE_SCALE;
   ripple.style.right = "auto";
 
   setTimeout(() => {
     ripple.style.scale = "0";
-  }, 350);
+  }, RIPPLE_FADE_DURATION);
 }

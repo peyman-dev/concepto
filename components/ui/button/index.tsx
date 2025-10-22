@@ -1,9 +1,10 @@
 "use client";
 import IButtonProps from "@/core/lib/types/button.type";
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import { tv } from "tailwind-variants";
 import { m, motion } from "motion/react";
 import startRippleAnimation from "./animation";
+import { ripple } from "@/core/ui/button";
 
 const Button = ({
   color,
@@ -40,17 +41,7 @@ const Button = ({
     },
   });
 
-  const ripple = tv({
-    base: "absolute size-8  duration-250 transition-all -top-2 -right-2 rounded-full scale-0",
-    variants: {
-      color: {
-        white: "bg-black/10",
-        blue: "bg-white/20",
-        yellow: "bg-white/20",
-        gray: "bg-white/20",
-      },
-    },
-  });
+
 
   const handleClick = (e: any) => {
     if (!buttonRef.current || !rippleRef.current) return;
@@ -96,4 +87,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default memo(Button);
