@@ -3,6 +3,7 @@ import IButtonProps from "@/core/lib/types/button.type";
 import React, { useRef } from "react";
 import { tv } from "tailwind-variants";
 import { m, motion } from "motion/react";
+import startRippleAnimation from "./animation";
 
 const Button = ({
   color,
@@ -14,7 +15,7 @@ const Button = ({
   const rippleRef = useRef<HTMLButtonElement | null>(null);
   const buttonRef = useRef(null);
   const button = tv({
-    base: "px-4 flex items-center h-10 select-none relative overflow-hidden rounded-sm cursor-pointer gap-2",
+    base: "px-4 flex items-center h-10 select-none relative overflow-hidden rounded-[12px] cursor-pointer gap-2",
     variants: {
       color: {
         blue: "bg-[#0D6EFD] text-white",
@@ -29,7 +30,7 @@ const Button = ({
         xs: "h-[32px]",
       },
       radius: {
-        default: "rounded-[6px]",
+        default: "rounded-[12px]",
         lg: "rounded-[16px]",
         full: "rounded-full",
       },
@@ -62,17 +63,8 @@ const Button = ({
     const y = e.clientY - top;
 
     const ripple = rippleRef.current;
-    const size = 32;
-    const halfSize = size / 2;
 
-    ripple.style.left = `${x - halfSize}px`;
-    ripple.style.top = `${y - halfSize}px`;
-    ripple.style.scale = "8";
-    ripple.style.right = "auto";
-
-    setTimeout(() => {
-      ripple.style.scale = "0";
-    }, 350);
+    startRippleAnimation({ ripple, x, y }); // Starting Ripple Animation
 
     if (typeof motionProps.onClick === "function") {
       motionProps.onClick(e);
@@ -93,6 +85,7 @@ const Button = ({
     >
       <span className="*:size-4">{motionProps?.prefixIcon}</span>
       {motionProps.children}
+      <span className="*:size-4">{motionProps?.suffixIcon}</span>
       <span
         className={ripple({
           color,
