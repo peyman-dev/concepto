@@ -1,7 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-type ISize = "xs" | "sm" | "md" | "lg";
-type IRadius = "sm" | "md" | "lg" | "full";
+type ISize = "xs" | "sm" | "lg" | "md";
+type IRadius = "default" | "lg" | "full";
 type IVariant =
   | "default"
   | "icon"
@@ -12,12 +12,12 @@ type IVariant =
 type IColors = "yellow" | "blue" | "white" | "gray";
 
 interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  size: ISize;
-  radius: IRadius;
-  variant: IVariant;
+  size?: ISize;
+  radius?: IRadius;
+  variant?: IVariant;
   prefixIcon?: ReactNode;
   suffixIcon?: ReactNode;
-  color: IColors;
+  color?: IColors;
 }
 
 export default IButtonProps;
