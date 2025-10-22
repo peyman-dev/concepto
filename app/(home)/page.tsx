@@ -1,16 +1,16 @@
-import HeroSection from '@/components/templates/home/hero'
-import Instructions from '@/components/templates/home/instructions'
-import Investment from '@/components/templates/home/investment'
-import React from 'react'
+import HeroSection from "@/components/templates/home/hero";
+import Instructions from "@/components/templates/home/instructions";
+import Investment from "@/components/templates/home/investment";
+import React from "react";
 
 const HomePage = () => {
   return (
-    <main className='space-y-40'>
+    <main className="space-y-40">
       <HeroSection />
       <Investment />
       <Instructions />
     </main>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
