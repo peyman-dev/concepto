@@ -1,6 +1,6 @@
 "use client"
 import useViewAnimate from "@/core/hooks/useViewAnimate";
-import { IContainerProps } from "@/core/lib/types/types";
+import { IContainerProps } from "@/core/types/types";
 import clsx from "clsx";
 import React from "react";
 

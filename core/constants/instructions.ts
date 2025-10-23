@@ -1,4 +1,4 @@
-import { IInstructionProps } from "../lib/types/types";
+import { IInstructionProps } from "../types/types";
 
 interface InstructionItemType extends IInstructionProps {
   id: string | number;
