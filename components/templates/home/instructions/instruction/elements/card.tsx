@@ -1,11 +1,11 @@
-import { IInstructionProps } from "@/core/lib/types/types";
+import { IInstructionProps } from "@/core/types/types";
 import Image from "next/image";
 import React from "react";
 import { tv } from "tailwind-variants";
 
 const Card = (props: IInstructionProps) => {
   const instruction = tv({
-    base: "w-full sm:w-[392px] h-[138px] rounded-[32px] text-primary-tint-100 relative flex justify-center",
+    base: "w-full sm:w-[392px] h-21 md:h-[138px] rounded-[32px] text-primary-tint-100 relative flex justify-center",
     variants: {
       level: {
         "1": "bg-primary-tint-100",
@@ -27,7 +27,7 @@ const Card = (props: IInstructionProps) => {
           width={1000}
           height={1000}
           alt={props.label}
-          className="w-[307px]! absolute bottom-0 h-[225px]!"
+          className="md:w-[307px]! w-[173.6px] h-[128.8px ] absolute bottom-0 md:h-[225px]!"
         />
       {/* </div> */}
     </div>

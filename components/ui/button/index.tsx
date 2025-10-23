@@ -1,5 +1,5 @@
 "use client";
-import IButtonProps from "@/core/lib/types/button.type";
+import IButtonProps from "@/core/types/button.type";
 import React, { memo, useRef } from "react";
 import { tv } from "tailwind-variants";
 import { m, motion } from "motion/react";

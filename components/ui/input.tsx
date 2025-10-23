@@ -1,4 +1,4 @@
-import { InputComponentProps } from "@/core/lib/types/input.type";
+import { InputComponentProps } from "@/core/types/input.type";
 import clsx from "clsx";
 import React, { isValidElement } from "react";
 
