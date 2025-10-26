@@ -6,13 +6,15 @@ const useViewAnimate = () => {
   const config = {
     initial: {
       opacity: 0,
-      x: 200,
+      // x: 200,
     },
     whileInView: {
       opacity: 1,
-      x: 0
+      // x: 0
     },
     viewport: {
+      once: true,
+
     }
   };
   return { motion, config };
