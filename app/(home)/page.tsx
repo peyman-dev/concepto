@@ -1,3 +1,4 @@
+import CareerOpportunities from "@/components/templates/home/career-opportunities";
 import Categories from "@/components/templates/home/categories";
 import HeroSection from "@/components/templates/home/hero";
 import Instructions from "@/components/templates/home/instructions";
@@ -13,8 +14,9 @@ const HomePage = () => {
       <Investment />
       <Instructions />
       <Categories />
-      <RecentNews />
       <PopularCompanies />
+      <CareerOpportunities />
+      <RecentNews />
 
     </main>
   );
