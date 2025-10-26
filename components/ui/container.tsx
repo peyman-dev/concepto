@@ -6,7 +6,7 @@ import React from "react";
 
 const Container = ({ as: Component = "div", children, className }: IContainerProps) => {
   const {config,motion} = useViewAnimate()
-  const MotionComponent = motion(Component)
+  const MotionComponent = motion.create(Component)
 
   return <MotionComponent {...config} className={clsx("container", className)} >
     {children}
