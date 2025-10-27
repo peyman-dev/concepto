@@ -26,21 +26,22 @@ const ButtonsProvider = ({
       <>
         <button
           onClick={() => {
-            swiper?.current?.slideNext()
+            swiper?.current?.slideNext();
           }}
           className={button({ position: "right" })}
         >
           <ChevronLeft className="size-4.5" />
         </button>
         {children}
-        <button onClick={() => swiper?.current?.slidePrev()}
+        <button
+          onClick={() => swiper?.current?.slidePrev()}
           className={button({ position: "left" })}
-          >
+        >
           <ChevronRight className="size-4.5" />
         </button>
       </>
     );
-  else return null;
+  else return children;
 };
 
 export default ButtonsProvider;
