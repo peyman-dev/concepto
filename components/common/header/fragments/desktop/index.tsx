@@ -8,7 +8,7 @@ import Navigation from "./elements/navigation";
 
 const Desktop = () => {
   return (
-    <Container as="nav">
+    <Container as="nav" className="lg:visible lg:block hidden invisible">
       <div className="flex-between pt-6 mx-auto">
         <div className="flex-ic gap-6">
           <Logo />
