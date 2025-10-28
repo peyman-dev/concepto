@@ -1,5 +1,6 @@
 import ArticleCard from "@/components/common/cards/article-card";
 import SectionWithBackground from "@/components/common/section-with-background";
+import Slider from "@/components/common/slider";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -17,11 +18,30 @@ export default function RecentNews() {
         </Link>
       </div>
       <div className="absolute w-full top-[150%]">
-        <div className="grid grid-cols-3  h-full gap-6!">
+        <Slider
+          className="h-[425px]! **:min-h-full! **:h-full! pb-1"
+          useAutoplay
+          breakpoints={{
+            576: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          slidesPerView={1}
+          spaceBetween={24}
+        >
           <ArticleCard />
           <ArticleCard />
           <ArticleCard />
-        </div>
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </Slider>
       </div>
     </SectionWithBackground>
   );
