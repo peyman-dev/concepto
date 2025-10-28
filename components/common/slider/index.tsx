@@ -10,11 +10,11 @@ import clsx from "clsx";
 
 
 
-const Slider = ({ children, useAutoplay,useArrows, ...props }: SliderType) => {
+const Slider = ({ children, className, useAutoplay,useArrows, ...props }: SliderType) => {
   const swiperRef = useRef<any>(null);
 
   return (
-    <Container as="section" className="relative h-full!">
+    <Container as="section" className={clsx("relative h-full!", className)}>
       <ButtonsProvider swiper={swiperRef} useArrows={useArrows}>
         <Swiper
         className={clsx("h-full!")}
