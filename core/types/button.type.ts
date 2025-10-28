@@ -12,6 +12,7 @@ type IVariant =
 type IColors = "yellow" | "blue" | "white" | "gray";
 
 interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+  hideTextOnMobile?: boolean;
   size?: ISize;
   radius?: IRadius;
   variant?: IVariant;
