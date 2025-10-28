@@ -5,4 +5,5 @@ export interface SliderType extends SwiperOptions {
   children: ReactNode;
   useArrows?: boolean;
   useAutoplay?: boolean;
+  className?: string
 }
