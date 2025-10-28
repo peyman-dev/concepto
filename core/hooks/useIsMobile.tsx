@@ -1,24 +1,25 @@
-"use client";
-import React from "react";
+import React from 'react';
 
-const useIsMobile = (customWidth: number = 768) => {
-  const [isMobile, setIsMobile] = React.useState(false);
+export const isMobile = (customWidth: number = 768): boolean => {
+  return window.innerWidth <= customWidth;
+};
+
+ const useIsMobile = (customWidth: number = 768): boolean => {
+  const [mobile, setMobile] = React.useState(isMobile(customWidth));
 
   React.useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= customWidth) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setMobile(isMobile(customWidth));
     };
 
-    handleResize();
+    window.addEventListener('resize', handleResize);
 
-    window.addEventListener("resize", handleResize);
-  });
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [customWidth]);
 
-  return isMobile;
+  return mobile;
 };
 
 export default useIsMobile;
