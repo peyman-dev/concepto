@@ -7,7 +7,13 @@ const useSearchStore = create<SearchStoreType>((set, get) => ({
   setSearchQuery: (query: string) => set({ searchQuery: query }),
   setIsTyping: (isTyping: boolean) => set({ isTyping: isTyping }),
 
-  isWrittedSomething: get()?.searchQuery?.length > 0,
+  isFullScreen: false,
+  setIsFullScreen: (isFullScreen: boolean) =>
+    set({ isFullScreen: isFullScreen }),
+
+  isWrittedSomething: () => {
+    return get().searchQuery.length > 0;
+  },
 }));
 
 export default useSearchStore;
