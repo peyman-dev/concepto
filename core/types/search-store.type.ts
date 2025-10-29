@@ -1,10 +1,11 @@
 export default interface SearchStoreType {
         isTyping: boolean;
         searchQuery: string;
+        isFullScreen: boolean;
+        setIsFullScreen: (isFullScreen: boolean) => void;
         setSearchQuery: (query: string) => void;
         setIsTyping: (isTyping: boolean) => void;
-
-        isWrittedSomething: boolean;
+        isWrittedSomething: () => boolean;
 }
 
 // const useSearchStore = create((set, get: any) => ({
