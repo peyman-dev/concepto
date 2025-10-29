@@ -15,7 +15,7 @@ const Main = ({ href, label, title, description }: IProps) => {
         <h5 className="font-bold text-[#444859] text-base">{title}</h5>
       </div>
       <div>
-        <p className="text-sm text-[#5B6176]">
+        <p className="text-sm line-clamp-3 text-justify text-[#5B6176]">
             {description}
         </p>
       </div>

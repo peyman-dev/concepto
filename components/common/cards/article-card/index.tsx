@@ -5,7 +5,7 @@ import Footer from "./elements/footer";
 
 const ArticleCard = () => {
   return (
-    <article className="w-full overflow-hidden relative bg-white h-[418px] rounded-[24px] shadow-lg">
+    <article className="w-full overflow-hidden relative flex flex-col justify-between pb-4 bg-white h-[400px]! rounded-[24px]  shadow-lg">
       <Header />
       <Main
         label="تجارت الکترونیک"
