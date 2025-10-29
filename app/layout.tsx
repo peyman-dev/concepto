@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./../public/css/globals.css";
 import "./../public/css/fonts.css";
 import Header from "./../components/common/header";
-
+import AppProvider from "@/core/providers/app-provider";
 
 export const metadata: Metadata = {
   title: "کانسپتو - بهترین کمپانی برای شما",
@@ -16,10 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa-IR" dir="rtl">
-      <body
-      >
-        <Header />
-        {children}
+      <body>
+        <AppProvider>
+          <Header />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );

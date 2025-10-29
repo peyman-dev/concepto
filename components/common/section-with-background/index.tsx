@@ -11,7 +11,7 @@ const SectionWithBackground = ({ children, ...props }: IProps) => {
   return (
     <section
       className={clsx(
-        "min-h-[470px] relative w-full bg-[url('/assets/static/buildings.jpg')] bg-center bg-cover bg-no-repeat",
+        "min-h-[470px] relative w-full bg-[url('/assets/static/buildings.jpg')] bg-center bg-cover rounded-smooth bg-no-repeat",
         props?.className
       )}
     >
