@@ -17,9 +17,9 @@ export default function RecentNews() {
           <ChevronLeft className="size-4" />
         </Link>
       </div>
-      <div className="absolute w-full top-[150%]">
+      <div className="absolute h-[425px]! w-full top-[150%]">
         <Slider
-          className="h-[425px]! **:min-h-full! **:h-full! pb-1"
+          className=" pb-1"
           useAutoplay
           breakpoints={{
             576: {
@@ -31,16 +31,16 @@ export default function RecentNews() {
             1024: {
               slidesPerView: 3,
             },
+            1200: {
+              slidesPerView: 4,
+            },
           }}
           slidesPerView={1}
           spaceBetween={24}
         >
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
+          {Array.from({ length: 10 }).map((_, index) => {
+            return <ArticleCard key={index} />;
+          })}
         </Slider>
       </div>
     </SectionWithBackground>
