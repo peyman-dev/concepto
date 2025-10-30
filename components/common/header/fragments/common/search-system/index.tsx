@@ -20,7 +20,7 @@ const SearchSystem = () => {
   return (
     <>
       <Input
-        className="w-full md:w-[439px]"
+        className="w-full md:w-[439px]! **:[.input-card]:w-[439px]! mx-0"
         prefixIcon={<Search className="size-5" />}
         placeholder="جستجو کنید"
         onChange={handleChange}

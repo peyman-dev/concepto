@@ -8,12 +8,12 @@ import { ripple } from "@/core/ui/button";
 import useIsMobile from "@/core/hooks/useIsMobile";
 
 const button = tv({
-  base: "px-4 flex items-center h-10 select-none relative overflow-hidden rounded-[12px] cursor-pointer gap-2",
+  base: "px-4 flex items-center h-10 select-none relative overflow-hidden rounded-[12px] cursor-pointer! gap-2",
   variants: {
     color: {
       blue: "bg-[#0D6EFD] text-white",
       yellow: "bg-[#FFC51A] text-black",
-      white: "bg-white text-black border-2 border-black",
+      white: "bg-white text-black border border-neutral-300",
       gray: "bg-[#2E303B] text-white",
     },
     size: {
@@ -88,8 +88,8 @@ const Button = memo(
         className={button({ color, size, radius, className })}
       >
         <span className="*:size-4">{prefixIcon}</span>
-        {shouldHiddenText ? null : children}
-        {!shouldHiddenText && <span className="*:size-4">{suffixIcon}</span>}
+        {shouldHiddenText && children ? null : children}
+        {!shouldHiddenText && suffixIcon && <span className="*:size-4">{suffixIcon}</span>}
         <span className={ripple({ color })} ref={rippleRef} />
       </motion.button>
     );

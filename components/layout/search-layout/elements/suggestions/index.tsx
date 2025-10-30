@@ -10,7 +10,7 @@ const Suggestions = () => {
   const { isScrolled } = useScrollController();
   const isFullScreen = useSearchStore((state) => state.isFullScreen);
   return (
-    <div className="mt-5 container w-full min-h-[60dvh]  bg-white rounded-[24px] shadow-lg">
+    <>
       <div className="border-b py-5.5 *:px-5 w-full  border-neutral-300 flex-between">
         <div className=" max-w-max flex-ic gap-2  text-[#444859] font-bold text-xl">
           <Flag />
@@ -31,7 +31,7 @@ const Suggestions = () => {
         <SuggestionItem />
         <SuggestionItem />
       </div>
-    </div>
+    </>
   );
 };
 
